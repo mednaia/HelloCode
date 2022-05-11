@@ -1,4 +1,13 @@
-﻿int a = new Random().Next(10, 99);
+﻿int Max(int arg1, int arg2, int arg3)
+{
+    int result = arg1;
+    if(arg2>result) result = arg2;
+    if(arg3>result) result = arg3;
+    return result;
+}
+
+
+int a = new Random().Next(10, 99);
 Console.WriteLine(a);
 int b = new Random().Next(10, 99);
 Console.WriteLine(b);
@@ -17,17 +26,10 @@ Console.WriteLine(o);
 int p = new Random().Next(10, 99);
 Console.WriteLine(p);
 
-int max = a;
-
-if (a>max) max = a;
-if (b>max) max = b;
-if (c>max) max = c;
-if (d>max) max = d;
-if (e>max) max = e;
-if (f>max) max = f;
-if (g>max) max = g;
-if (o>max) max = o;
-if (p>max) max = p;
+int max1 = Max(a,b,c);
+int max2 = Max(d,e,f);
+int max3 = Max(g,o,p);
+int max = Max(max1,max2,max3);
 
 Console.Write("max = ");
 Console.WriteLine(max);
