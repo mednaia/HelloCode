@@ -26,10 +26,10 @@ Console.WriteLine(o);
 int p = new Random().Next(10, 99);
 Console.WriteLine(p);
 
-int max1 = Max(a,b,c);
-int max2 = Max(d,e,f);
-int max3 = Max(g,o,p);
-int max = Max(max1,max2,max3);
+int max = Max(
+    Max(a,b,c),
+    Max(d,e,f),
+    Max(g,o,p));
 
 Console.Write("max = ");
 Console.WriteLine(max);
